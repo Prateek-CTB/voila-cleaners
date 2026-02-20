@@ -7,15 +7,20 @@ import { MapPin, CheckCircle2, XCircle, AlertTriangle } from "lucide-react"
 interface PostcodeInputProps {
     required?: boolean
     className?: string
+    value?: string
+    onChange?: (value: string) => void
 }
 
-export function PostcodeInput({ required = false, className = "" }: PostcodeInputProps) {
-    const [value, setValue] = useState("")
+export function PostcodeInput({ required = false, className = "", value: controlledValue, onChange }: PostcodeInputProps) {
+    const [internalValue, setInternalValue] = useState("")
     const [status, setStatus] = useState<PostcodeStatus>({ type: "empty" })
+
+    const value = controlledValue !== undefined ? controlledValue : internalValue
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         const v = e.target.value.toUpperCase()
-        setValue(v)
+        setInternalValue(v)
+        onChange?.(v)
         setStatus(validatePostcode(v))
     }
 
