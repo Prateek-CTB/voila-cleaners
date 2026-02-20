@@ -377,10 +377,15 @@ export default function HomePage() {
                     </h2>
                     <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-10 max-w-lg mx-auto">Partner with a professional team that understands presentation, discretion, and detail.</p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
-                        <input type="email" placeholder="Enter your email" className="flex-1 px-5 py-3 rounded-full border border-[#ede9e3] bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#1a1a1a]/20 shadow-sm" />
-                        <Link href="/contact" className="px-6 py-3 text-sm font-semibold rounded-full bg-[#1a1a1a] text-white hover:bg-[#333] transition-colors whitespace-nowrap shadow-sm">
-                            Request Quote Today
-                        </Link>
+                        <input type="text" value={postcode} onChange={(e) => setPostcode(e.target.value)}
+                            onKeyDown={(e) => { if (e.key === "Enter" && postcode.trim()) setShowModal(true) }}
+                            placeholder="Enter your postcode e.g. SW1A 1AA"
+                            className="flex-1 px-5 py-3 rounded-full border border-[#ede9e3] bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#1a1a1a]/20 shadow-sm" />
+                        <button onClick={() => { if (postcode.trim()) setShowModal(true) }}
+                            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-full bg-[#1a1a1a] text-white hover:bg-[#333] transition-colors whitespace-nowrap shadow-sm cursor-pointer">
+                            <Search className="size-4" strokeWidth={2} />
+                            Find a Cleaner
+                        </button>
                     </div>
                     <p className="text-xs text-[#9a9a9a] mt-5">500+ clients across London trust Voila Cleaners</p>
                 </div>

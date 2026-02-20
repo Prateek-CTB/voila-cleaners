@@ -11,7 +11,7 @@ const propertyTypes = ["Flat / Apartment", "House", "Penthouse", "Commercial Off
 const serviceTypes = ["Regular Housekeeping", "One-off Deep Clean", "End of Tenancy", "Commercial Cleaning", "Serviced Apt Turnover", "After-Builders Clean", "Retail / Showroom"]
 
 const contactInfo = [
-    { icon: Mail, label: "Email", value: "hello@voilacleaners.co.uk", href: "mailto:hello@voilacleaners.co.uk" },
+    { icon: Mail, label: "Email", value: "info@voila-cleaners.co.uk", href: "mailto:info@voila-cleaners.co.uk" },
     { icon: Phone, label: "Phone", value: "020 7112 9177", href: "tel:+442071129177" },
     { icon: MapPin, label: "Address", value: "34 Bloomsbury Street, London WC1B 3QJ", href: "https://maps.google.com/?q=34+Bloomsbury+Street+London+WC1B+3QJ" },
     { icon: Clock, label: "Response Time", value: "Within 24 hours", href: null },

@@ -17,6 +17,9 @@ export function Footer() {
                         <a href="tel:+442071129177" className="text-xs text-[#9a9a9a] hover:text-[#1a1a1a] transition-colors mt-1 block">
                             020 7112 9177
                         </a>
+                        <a href="mailto:info@voila-cleaners.co.uk" className="text-xs text-[#9a9a9a] hover:text-[#1a1a1a] transition-colors mt-1 block">
+                            info@voila-cleaners.co.uk
+                        </a>
                     </div>
 
                     {/* Sitemap */}
