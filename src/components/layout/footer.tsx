@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
     return (
@@ -7,7 +8,15 @@ export function Footer() {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                     {/* Brand */}
                     <div className="lg:col-span-2">
-                        <p className="text-sm font-semibold text-[#1a1a1a] mb-2">Voila Cleaners</p>
+                        <Link href="/" className="inline-block mb-4">
+                            <Image
+                                src="/Voila-final.png"
+                                alt="Voila Cleaners"
+                                width={200}
+                                height={150}
+                                className="h-24 w-auto object-contain"
+                            />
+                        </Link>
                         <p className="text-sm text-[#6b6b6b] leading-relaxed max-w-[280px]">
                             Premium Cleaning Services in London — trusted by homeowners, landlords, and businesses.
                         </p>
