@@ -21,7 +21,7 @@ export function Footer() {
                             Premium Cleaning Services in London — trusted by homeowners, landlords, and businesses.
                         </p>
                         <p className="text-xs text-[#9a9a9a] mt-3">
-                            34 Bloomsbury Street, London WC1B 3QJ
+                            66 Paul Street, London, EC2A 4NA
                         </p>
                         <a href="tel:+442071129177" className="text-xs text-[#9a9a9a] hover:text-[#1a1a1a] transition-colors mt-1 block">
                             020 7112 9177

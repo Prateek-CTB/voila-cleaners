@@ -12,7 +12,7 @@ const serviceTypes = ["Regular Housekeeping", "One-off Deep Clean", "End of Tena
 const contactInfo = [
     { icon: Mail, label: "Email", value: "info@voila-cleaners.co.uk", href: "mailto:info@voila-cleaners.co.uk" },
     { icon: Phone, label: "Phone", value: "020 7112 9177", href: "tel:+442071129177" },
-    { icon: MapPin, label: "Address", value: "34 Bloomsbury Street, London WC1B 3QJ", href: "https://maps.google.com/?q=34+Bloomsbury+Street+London+WC1B+3QJ" },
+    { icon: MapPin, label: "Address", value: "66 Paul Street, London, EC2A 4NA", href: "https://maps.google.com/?q=66+Paul+Street+London+EC2A+4NA" },
     { icon: Clock, label: "Response Time", value: "Within 24 hours", href: null },
 ]
 
