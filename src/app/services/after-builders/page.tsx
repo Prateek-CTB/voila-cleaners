@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Navbar } from "@/components/layout/navbar"
 import { PageHero } from "@/components/ui/page-hero"
 import { SplitFeature } from "@/components/ui/split-feature"
@@ -9,6 +8,17 @@ import { Testimonials3D } from "@/components/ui/testimonials-3d"
 import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { HardHat, Wrench, Home, Ruler } from "lucide-react"
+
+export const metadata: Metadata = {
+    title: "After Builders Cleaning London | Post-Construction Clean | Voila Cleaners",
+    description: "Specialist after-builders and post-construction cleaning in London. Industrial-grade equipment, residential-grade finish. Dust, debris, and paint residue removed. Free quote.",
+    openGraph: {
+        title: "After Builders Cleaning London | Voila Cleaners",
+        description: "Post-construction cleaning specialists in London. Industrial equipment, meticulous finish.",
+        url: "https://voila-cleaners.co.uk/services/after-builders",
+    },
+    alternates: { canonical: "https://voila-cleaners.co.uk/services/after-builders" },
+}
 
 export default function AfterBuildersPage() {
     return (

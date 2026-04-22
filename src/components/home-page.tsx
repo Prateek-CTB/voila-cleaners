@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { motion } from "framer-motion"
 import { Star, ArrowRight, Home, Building2, KeyRound, Landmark, BellRing, Briefcase, Plane, HardHat, ClipboardCheck, ShieldCheck, Clock, Search } from "lucide-react"
 import { Testimonials3D } from "@/components/ui/testimonials-3d"
 import { PostcodeModal } from "@/components/ui/postcode-modal"
@@ -82,14 +83,14 @@ const faqs = [
 ]
 
 const clientTypes = [
-    { label: "Luxury Homeowners", icon: <Home className="size-5" strokeWidth={1.5} /> },
-    { label: "Property Managers", icon: <Building2 className="size-5" strokeWidth={1.5} /> },
-    { label: "Landlords", icon: <KeyRound className="size-5" strokeWidth={1.5} /> },
-    { label: "Estate Agents", icon: <Landmark className="size-5" strokeWidth={1.5} /> },
-    { label: "Serviced Apt Hosts", icon: <BellRing className="size-5" strokeWidth={1.5} /> },
     { label: "Corporate Offices", icon: <Briefcase className="size-5" strokeWidth={1.5} /> },
-    { label: "Relocation Clients", icon: <Plane className="size-5" strokeWidth={1.5} /> },
+    { label: "Property Managers", icon: <Building2 className="size-5" strokeWidth={1.5} /> },
+    { label: "Serviced Apt Hosts", icon: <BellRing className="size-5" strokeWidth={1.5} /> },
     { label: "Developers", icon: <HardHat className="size-5" strokeWidth={1.5} /> },
+    { label: "Estate Agents", icon: <Landmark className="size-5" strokeWidth={1.5} /> },
+    { label: "Landlords", icon: <KeyRound className="size-5" strokeWidth={1.5} /> },
+    { label: "Relocation Clients", icon: <Plane className="size-5" strokeWidth={1.5} /> },
+    { label: "Luxury Homeowners", icon: <Home className="size-5" strokeWidth={1.5} /> },
 ]
 
 const trustCards = [
@@ -119,10 +120,10 @@ const voilaTestimonials = [
 const HERO_IMG = "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=90&fit=crop"
 
 const heroServiceCards = [
-    { label: "Luxury Housekeeping", tag: "View service", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80&fit=crop", href: "/services/luxury-housekeeping", bg: "bg-[#e8dfd3]" },
-    { label: "Deep Cleaning", tag: "View service", image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&q=80&fit=crop", href: "/services/deep-cleaning", bg: "bg-[#c9e4de]" },
     { label: "Office Cleaning", tag: "Join our clients", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&q=80&fit=crop", href: "/services/commercial-cleaning", bg: "bg-[#d4dce8]" },
     { label: "Serviced Apartments", tag: "View service", image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80&fit=crop", href: "/services/serviced-apartments", bg: "bg-[#e8d4d4]" },
+    { label: "After-Builders Clean", tag: "View service", image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80&fit=crop", href: "/services/after-builders", bg: "bg-[#c9e4de]" },
+    { label: "Retail & Showroom", tag: "View service", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80&fit=crop", href: "/services/retail-cleaning", bg: "bg-[#e8dfd3]" },
 ]
 
 // ── Component ────────────────────────────────────────────────────
@@ -156,19 +157,24 @@ export default function HomePage() {
                         </div>
 
                         {/* Text content overlaid on image */}
-                        <div className="absolute inset-0 flex flex-col justify-end sm:justify-center px-4 sm:px-8 md:px-14 lg:px-16 pb-4 sm:pb-0">
-                            <span className="hidden sm:inline-flex self-start items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-3.5 py-1.5 text-xs font-medium text-[#1a1a1a] shadow-sm mb-5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                                Premium Cleaning Services London
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }} 
+                            animate={{ opacity: 1, y: 0 }} 
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="absolute inset-0 flex flex-col justify-end sm:justify-center px-4 sm:px-8 md:px-14 lg:px-16 pb-4 sm:pb-0">
+                            <span className="hidden sm:inline-flex self-start items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-none px-3.5 py-1.5 text-xs font-medium text-[#1a1a1a] shadow-none mb-5 font-mono">
+                                <span className="w-1.5 h-1.5 rounded-none bg-green-500" />
+                                London&apos;s Commercial Cleaning Specialist
                             </span>
-                            <h1 className="text-[clamp(1.4rem,4.5vw,4.2rem)] font-bold tracking-tight leading-[1.1] text-white max-w-2xl mb-1 sm:mb-4">
-                                Achieve excellence in<br />
-                                home, office, and property.
+                            <h1 className="text-[clamp(1.4rem,4.5vw,4.2rem)] font-bold tracking-tight leading-[1.05] text-white max-w-2xl mb-1 sm:mb-4">
+                                Premium Office &amp;<br />
+                                Commercial Cleaning<br />
+                                across London.
                             </h1>
-                            <p className="text-xs sm:text-sm md:text-[15px] text-white/80 leading-relaxed max-w-lg mb-0">
-                                Voila Cleaners delivers high-end domestic and commercial cleaning across London.
+                            <p className="text-xs sm:text-sm md:text-[16px] text-white/80 leading-[1.65] max-w-lg mb-0 font-light">
+                                Trusted by offices, property managers, and serviced apartment hosts. Vetted, insured, and built around your schedule.
                             </p>
-                        </div>
+                        </motion.div>
 
                         {/* Floating stats */}
                         <div className="hidden lg:block absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg px-5 py-3 border border-white/60">
@@ -182,28 +188,38 @@ export default function HomePage() {
                     </div>
 
                     {/* Service preview cards row — like the yoga reference */}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 mt-3 sm:mt-5">
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+                        }}
+                        className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 mt-3 sm:mt-5">
                         {heroServiceCards.map((c, i) => (
-                            <Link key={i} href={c.href} className="group">
-                                <div className={`${c.bg} rounded-[16px] sm:rounded-[20px] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.10)] transition-all`}>
-                                    <div className="relative w-full aspect-[5/4] sm:aspect-[4/3] overflow-hidden">
-                                        <Image src={c.image} alt={c.label} fill className="object-cover group-hover:scale-[1.04] transition-transform duration-500" sizes="(max-width:1024px)50vw,25vw" />
-                                        {/* Tag pill on image */}
-                                        <span className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white/90 backdrop-blur-sm text-[9px] sm:text-[10px] font-medium text-[#1a1a1a] px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full shadow-sm">
-                                            {c.tag}
-                                        </span>
-                                        {/* Arrow icon */}
-                                        <span className="absolute top-2 right-2 sm:top-3 sm:right-3 w-5 h-5 sm:w-7 sm:h-7 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm group-hover:bg-[#1a1a1a] group-hover:text-white transition-colors">
-                                            <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                                        </span>
+                            <motion.div key={i} variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
+                                <Link href={c.href} className="group">
+                                    <div className={`${c.bg} rounded-none overflow-hidden transition-all border border-transparent hover:border-foreground`}>
+                                        <div className="relative w-full aspect-[5/4] sm:aspect-[4/3] overflow-hidden">
+                                            <Image src={c.image} alt={c.label} fill className="object-cover group-hover:scale-[1.04] transition-transform duration-500" sizes="(max-width:1024px)50vw,25vw" />
+                                            {/* Tag pill on image */}
+                                            <span className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-white/90 backdrop-blur-sm text-[9px] sm:text-[10px] font-medium text-[#1a1a1a] px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-none font-mono">
+                                                {c.tag}
+                                            </span>
+                                            {/* Arrow icon */}
+                                            <span className="absolute top-2 right-2 sm:top-3 sm:right-3 w-5 h-5 sm:w-7 sm:h-7 bg-white/90 backdrop-blur-sm rounded-none flex items-center justify-center group-hover:bg-[#1a1a1a] group-hover:text-white transition-colors">
+                                                <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                                            </span>
+                                        </div>
+                                        <div className="p-2 sm:p-4">
+                                            <p className="font-semibold text-[11px] sm:text-sm text-[#1a1a1a]">{c.label}</p>
+                                        </div>
                                     </div>
-                                    <div className="p-2 sm:p-4">
-                                        <p className="font-semibold text-[11px] sm:text-sm text-[#1a1a1a]">{c.label}</p>
-                                    </div>
-                                </div>
-                            </Link>
+                                </Link>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
 
                     {/* CTA strip below cards */}
                     <div className="mt-3 sm:mt-8 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 max-w-xl mx-auto">
@@ -223,10 +239,11 @@ export default function HomePage() {
                             <span className="group-hover:underline underline-offset-4">Find a Cleaner</span>
                         </Link>
                         <span className="text-[#d4d0c8]">|</span>
-                        <p className="text-xs text-[#6b6b6b]">Trusted by 500+ London homeowners</p>
+                        <p className="text-xs text-[#6b6b6b]">Trusted by 500+ London offices and properties</p>
                     </div>
                 </div>
             </section>
+
 
             {/* ════════════════════════════════════════════════════════════
           2. WHY VOILA — Interactive showcase
@@ -238,15 +255,25 @@ export default function HomePage() {
       ════════════════════════════════════════════════════════════ */}
             <section className="py-24 bg-[#F7F7F5]">
                 <div className="max-w-6xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] tracking-tight mb-12">Who We Serve</h2>
-                    <div className="flex flex-wrap justify-center gap-6">
+                    <motion.h2 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="text-3xl md:text-4xl font-bold text-[#1a1a1a] tracking-tight mb-12">Businesses &amp; Properties We Serve</motion.h2>
+                    <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.05 } } }}
+                        className="flex flex-wrap justify-center gap-6">
                         {clientTypes.map((c, i) => (
-                            <div key={i} className="flex flex-col items-center gap-2.5 group cursor-pointer">
-                                <div className="w-16 h-16 rounded-full bg-white border border-[#e0dcd6] shadow-[0_4px_16px_rgba(0,0,0,0.06)] flex items-center justify-center text-[#1a1a1a] group-hover:scale-110 group-hover:shadow-[0_6px_24px_rgba(0,0,0,0.1)] group-hover:border-[#ccc] transition-all duration-300">{c.icon}</div>
-                                <span className="text-xs font-medium text-[#6b6b6b] group-hover:text-[#1a1a1a] transition-colors max-w-[80px] text-center leading-tight">{c.label}</span>
-                            </div>
+                            <motion.div key={i} variants={{ hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1 } }} className="flex flex-col items-center gap-2.5 group cursor-pointer">
+                                <div className="w-16 h-16 rounded-none bg-white border border-[#D4D4D8] flex items-center justify-center text-[#1a1a1a] transition-all duration-300 group-hover:border-[#0A0A0A] group-hover:bg-[#0A0A0A] group-hover:text-white">{c.icon}</div>
+                                <span className="text-[13px] font-mono text-[#71717A] group-hover:text-[#0A0A0A] transition-colors max-w-[80px] text-center leading-tight">{c.label}</span>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -373,9 +400,9 @@ export default function HomePage() {
                         </div>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1a1a1a] leading-tight mb-4">
-                        Ready to Experience<br />Five-Star Cleaning<br />Standards?
+                        Ready to Elevate<br />Your Office or<br />Property?
                     </h2>
-                    <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-10 max-w-lg mx-auto">Partner with a professional team that understands presentation, discretion, and detail.</p>
+                    <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-10 max-w-lg mx-auto">Partner with a professional team that understands your business, your schedule, and your standards.</p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
                         <input type="text" value={postcode} onChange={(e) => setPostcode(e.target.value)}
                             onKeyDown={(e) => { if (e.key === "Enter" && postcode.trim()) setShowModal(true) }}
@@ -387,7 +414,7 @@ export default function HomePage() {
                             Find a Cleaner
                         </button>
                     </div>
-                    <p className="text-xs text-[#9a9a9a] mt-5">500+ clients across London trust Voila Cleaners</p>
+                    <p className="text-xs text-[#9a9a9a] mt-5">500+ offices and properties across London trust Voila Cleaners</p>
                 </div>
             </section>
         </>

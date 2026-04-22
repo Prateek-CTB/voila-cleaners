@@ -20,7 +20,7 @@ interface ScrollServicesProps {
 }
 
 export function ScrollServices({ residential, commercial }: ScrollServicesProps) {
-    const [activeTab, setActiveTab] = useState<"residential" | "commercial">("residential");
+    const [activeTab, setActiveTab] = useState<"commercial" | "residential">("commercial");
 
     const services = activeTab === "residential" ? residential : commercial;
 
@@ -30,7 +30,7 @@ export function ScrollServices({ residential, commercial }: ScrollServicesProps)
                 {/* Header */}
                 <div className="text-center mb-10">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] tracking-tight mb-3">
-                        We&apos;ve Done the Hard Work,<br />So You Don&apos;t Have To.
+                        Commercial &amp; Office Cleaning<br />Built Around Your Business.
                     </h2>
                     <p className="text-[#6b6b6b] text-[15px] mb-6 max-w-lg mx-auto">
                         Structured systems, trained professionals, and a relentless focus on quality — across every service.
@@ -38,7 +38,7 @@ export function ScrollServices({ residential, commercial }: ScrollServicesProps)
 
                     {/* Tab pills — click to switch */}
                     <div className="inline-flex bg-white border border-[#ede9e3] rounded-full p-1 gap-1 shadow-sm">
-                        {(["residential", "commercial"] as const).map((t) => (
+                        {(["commercial", "residential"] as const).map((t) => (
                             <button
                                 key={t}
                                 onClick={() => setActiveTab(t)}

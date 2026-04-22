@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Navbar } from "@/components/layout/navbar"
 import { PageHero } from "@/components/ui/page-hero"
 import { SplitFeature } from "@/components/ui/split-feature"
@@ -8,6 +7,17 @@ import { Testimonials3D } from "@/components/ui/testimonials-3d"
 import { StatsBar } from "@/components/ui/stats-bar"
 import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+    title: "Luxury Housekeeping London | Premium Home Cleaning Service | Voila Cleaners",
+    description: "Bespoke luxury housekeeping for London's finest homes. Same trusted cleaner every visit. 50-point checklist. Fully insured and vetted professionals. Request a bespoke quote.",
+    openGraph: {
+        title: "Luxury Housekeeping London | Voila Cleaners",
+        description: "Five-star housekeeping for London's luxury homes. Tailored schedules, premium products, consistent professionals.",
+        url: "https://voila-cleaners.co.uk/services/luxury-housekeeping",
+    },
+    alternates: { canonical: "https://voila-cleaners.co.uk/services/luxury-housekeeping" },
+}
 
 export default function LuxuryHousekeepingPage() {
     return (

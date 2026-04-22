@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Navbar } from "@/components/layout/navbar"
 import { PageHero } from "@/components/ui/page-hero"
 import { SplitFeature } from "@/components/ui/split-feature"
@@ -9,6 +8,17 @@ import { Testimonials3D } from "@/components/ui/testimonials-3d"
 import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { Building, Smartphone, Camera, Siren } from "lucide-react"
+
+export const metadata: Metadata = {
+    title: "Serviced Apartment Cleaning London | Airbnb & Short Let Turnover | Voila Cleaners",
+    description: "Fast, reliable serviced apartment and Airbnb cleaning in London. Guest-ready guaranteed. Same-day turnovers available. Trusted by property managers and short-let hosts. Free quote.",
+    openGraph: {
+        title: "Serviced Apartment Cleaning London | Voila Cleaners",
+        description: "Professional Airbnb and short-let turnover cleaning across London. Fast, reliable, guest-ready guaranteed.",
+        url: "https://voila-cleaners.co.uk/services/serviced-apartments",
+    },
+    alternates: { canonical: "https://voila-cleaners.co.uk/services/serviced-apartments" },
+}
 
 export default function ServicedApartmentsPage() {
     return (

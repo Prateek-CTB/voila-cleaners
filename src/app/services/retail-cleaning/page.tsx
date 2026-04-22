@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Navbar } from "@/components/layout/navbar"
 import { PageHero } from "@/components/ui/page-hero"
 import { SplitFeature } from "@/components/ui/split-feature"
@@ -9,6 +8,17 @@ import { Testimonials3D } from "@/components/ui/testimonials-3d"
 import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { Shirt, Frame, UtensilsCrossed, CarFront } from "lucide-react"
+
+export const metadata: Metadata = {
+    title: "Retail & Showroom Cleaning London | Brand-Grade Standards | Voila Cleaners",
+    description: "Professional retail and showroom cleaning services in London. Maintain brand-grade presentation for stores, galleries, and hospitality venues. Flexible scheduling. Free quote.",
+    openGraph: {
+        title: "Retail & Showroom Cleaning London | Voila Cleaners",
+        description: "Brand-grade cleaning for retail stores, galleries, and showrooms across London.",
+        url: "https://voila-cleaners.co.uk/services/retail-cleaning",
+    },
+    alternates: { canonical: "https://voila-cleaners.co.uk/services/retail-cleaning" },
+}
 
 export default function RetailCleaningPage() {
     return (

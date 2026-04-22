@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Navbar } from "@/components/layout/navbar"
 import { PageHero } from "@/components/ui/page-hero"
 import { SplitFeature } from "@/components/ui/split-feature"
@@ -9,6 +8,17 @@ import { Testimonials3D } from "@/components/ui/testimonials-3d"
 import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { CookingPot, ShowerHead, Sofa, DoorOpen } from "lucide-react"
+
+export const metadata: Metadata = {
+    title: "Deep Cleaning Services London | Top-to-Bottom Clean | Voila Cleaners",
+    description: "Comprehensive deep cleaning services across London. Seasonal refreshes, post-renovation recovery, and property preparation. Every surface, every corner. Book your deep clean today.",
+    openGraph: {
+        title: "Deep Cleaning Services London | Voila Cleaners",
+        description: "Top-to-bottom deep cleaning for homes and properties across London.",
+        url: "https://voila-cleaners.co.uk/services/deep-cleaning",
+    },
+    alternates: { canonical: "https://voila-cleaners.co.uk/services/deep-cleaning" },
+}
 
 export default function DeepCleaningPage() {
     return (

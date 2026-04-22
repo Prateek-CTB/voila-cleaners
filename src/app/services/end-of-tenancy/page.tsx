@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Navbar } from "@/components/layout/navbar"
 import { PageHero } from "@/components/ui/page-hero"
 import { SplitFeature } from "@/components/ui/split-feature"
@@ -9,6 +8,17 @@ import { Testimonials3D } from "@/components/ui/testimonials-3d"
 import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { Shield, ClipboardList, Zap } from "lucide-react"
+
+export const metadata: Metadata = {
+    title: "End of Tenancy Cleaning London | Deposit-Back Guarantee | Voila Cleaners",
+    description: "Professional end of tenancy cleaning in London. Agency-approved checklists, 100% deposit-back rate. Same-day availability. DBS-checked cleaners. Fixed prices, no surprises.",
+    openGraph: {
+        title: "End of Tenancy Cleaning London | Voila Cleaners",
+        description: "Move-out cleaning to deposit-back standards. Agency-approved checklists. Same-day availability across London.",
+        url: "https://voila-cleaners.co.uk/services/end-of-tenancy",
+    },
+    alternates: { canonical: "https://voila-cleaners.co.uk/services/end-of-tenancy" },
+}
 
 export default function EndOfTenancyPage() {
     return (

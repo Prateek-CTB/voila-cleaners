@@ -56,10 +56,9 @@ export function Navbar() {
             )}>
                 {/* ─── Logo Container ─── */}
                 <div className={cn(
-                    "flex-none pointer-events-auto rounded-full px-4 py-1",
-                    "bg-white/[0.12] backdrop-blur-2xl backdrop-saturate-[1.8]",
-                    "border border-white/[0.25]",
-                    "shadow-[0_8px_32px_rgba(0,0,0,0.18),_inset_0_1px_0_rgba(255,255,255,0.25),_inset_0_-1px_0_rgba(255,255,255,0.05)]",
+                    "flex-none pointer-events-auto rounded-none px-4 py-1",
+                    "bg-white/[0.95] backdrop-blur-none",
+                    "border border-border",
                 )}>
                     <Link href="/" className="relative block group">
                         <Image
@@ -77,10 +76,9 @@ export function Navbar() {
                 {/* ─── Navbar Container ─── */}
                 <div className="flex-none pointer-events-auto">
                     <nav className={cn(
-                        "relative flex items-center justify-between h-[52px] px-2 pl-6 rounded-full transition-all duration-500",
-                        "bg-white/[0.12] backdrop-blur-2xl backdrop-saturate-[1.8]",
-                        "border border-white/[0.25]",
-                        "shadow-[0_8px_32px_rgba(0,0,0,0.18),_inset_0_1px_0_rgba(255,255,255,0.25),_inset_0_-1px_0_rgba(255,255,255,0.05)]",
+                        "relative flex items-center justify-between h-[52px] px-2 pl-6 rounded-none transition-all duration-500",
+                        "bg-white/[0.95] backdrop-blur-none",
+                        "border border-border",
                     )}>
                         {/* Desktop Centre Nav */}
                         <div className="hidden md:flex items-center gap-0.5">
@@ -106,9 +104,8 @@ export function Navbar() {
                                         onMouseLeave={() => setServicesOpen(false)}
                                     >
                                         <div className={cn(
-                                            "bg-white/[0.92] backdrop-blur-3xl backdrop-saturate-[1.8] rounded-2xl p-5 min-w-[420px]",
-                                            "border border-black/[0.08]",
-                                            "shadow-[0_16px_48px_rgba(0,0,0,0.14),_inset_0_1px_0_rgba(255,255,255,0.6)]",
+                                            "bg-white rounded-none p-5 min-w-[420px]",
+                                            "border border-border",
                                         )}>
                                             <div className="grid grid-cols-2 gap-6">
                                                 <div>
@@ -117,7 +114,7 @@ export function Navbar() {
                                                         {residentialLinks.map(l => (
                                                             <Link key={l.href} href={l.href}
                                                                 onClick={() => setServicesOpen(false)}
-                                                                className="block px-3 py-2.5 rounded-xl text-[13px] font-semibold text-[#1a1a1a] hover:bg-black/[0.05] transition-all duration-150">
+                                                                className="block px-3 py-2.5 rounded-none text-[13px] font-semibold text-[#1a1a1a] hover:bg-black/[0.05] transition-all duration-150">
                                                                 {l.label}
                                                             </Link>
                                                         ))}
@@ -129,7 +126,7 @@ export function Navbar() {
                                                         {commercialLinks.map(l => (
                                                             <Link key={l.href} href={l.href}
                                                                 onClick={() => setServicesOpen(false)}
-                                                                className="block px-3 py-2.5 rounded-xl text-[13px] font-semibold text-[#1a1a1a] hover:bg-black/[0.05] transition-all duration-150">
+                                                                className="block px-3 py-2.5 rounded-none text-[13px] font-semibold text-[#1a1a1a] hover:bg-black/[0.05] transition-all duration-150">
                                                                 {l.label}
                                                             </Link>
                                                         ))}
@@ -156,9 +153,8 @@ export function Navbar() {
                         {/* CTA */}
                         <Link href="/contact"
                             className={cn(
-                                "hidden md:inline-flex items-center px-5 py-2 text-[12px] font-semibold tracking-[0.08em] uppercase rounded-full shrink-0 transition-all duration-300",
+                                "hidden md:inline-flex items-center px-5 py-2 text-[12px] font-semibold tracking-[0.08em] uppercase rounded-none shrink-0 transition-all duration-300",
                                 "bg-[#1a1a1a] text-white hover:bg-[#333]",
-                                "shadow-[0_2px_12px_rgba(0,0,0,0.15)]",
                             )}>
                             Book a Clean
                         </Link>

@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export function Footer() {
     return (
-        <footer className="bg-[#F7F7F5] border-t border-[#ede9e3] py-14">
+        <footer className="bg-secondary border-t border-border py-14">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                     {/* Brand */}
@@ -17,13 +17,13 @@ export function Footer() {
                                 className="h-24 w-auto object-contain"
                             />
                         </Link>
-                        <p className="text-sm text-[#6b6b6b] leading-relaxed max-w-[280px]">
+                        <p className="text-sm text-muted-foreground leading-relaxed max-w-[280px]">
                             Premium Cleaning Services in London — trusted by homeowners, landlords, and businesses.
                         </p>
-                        <p className="text-xs text-[#9a9a9a] mt-3">
+                        <p className="text-xs text-muted-foreground mt-3 font-mono">
                             66 Paul Street, London, EC2A 4NA
                         </p>
-                        <a href="tel:+442071129177" className="text-xs text-[#9a9a9a] hover:text-[#1a1a1a] transition-colors mt-1 block">
+                        <a href="tel:+442071129177" className="text-xs font-mono text-muted-foreground hover:text-foreground transition-colors mt-1 block">
                             020 7112 9177
                         </a>
                         <a href="mailto:info@voila-cleaners.co.uk" className="text-xs text-[#9a9a9a] hover:text-[#1a1a1a] transition-colors mt-1 block">
@@ -33,7 +33,7 @@ export function Footer() {
 
                     {/* Sitemap */}
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-[#9a9a9a] mb-4">Sitemap</p>
+                        <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">Sitemap</p>
                         <ul className="space-y-2.5">
                             {[
                                 { label: "Services", href: "#services" },
@@ -53,7 +53,7 @@ export function Footer() {
 
                     {/* Services */}
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-[#9a9a9a] mb-4">Social</p>
+                        <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">Social</p>
                         <ul className="space-y-2.5">
                             {[
                                 { label: "Instagram", href: "#" },

@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Navbar } from "@/components/layout/navbar"
 import { PageHero } from "@/components/ui/page-hero"
 import { SplitFeature } from "@/components/ui/split-feature"
@@ -8,6 +7,17 @@ import { ValuesParallax } from "@/components/ui/values-parallax"
 import { Testimonials3D } from "@/components/ui/testimonials-3d"
 import { EyeOff, Search, Handshake, Gem } from "lucide-react"
 import { Footer } from "@/components/layout/footer"
+
+export const metadata: Metadata = {
+    title: "About Voila Cleaners | Premium Cleaning Company London",
+    description: "Voila Cleaners — London's premium cleaning company. 8+ years of excellence, DBS-checked professionals, structured 50-point checklists. Trusted by homeowners, offices, and property managers.",
+    openGraph: {
+        title: "About Voila Cleaners | Premium Cleaning Company London",
+        description: "Learn about Voila Cleaners — London's premium cleaning partner. Our story, values, and approach to five-star cleaning.",
+        url: "https://voila-cleaners.co.uk/about",
+    },
+    alternates: { canonical: "https://voila-cleaners.co.uk/about" },
+}
 
 export default function AboutPage() {
     return (

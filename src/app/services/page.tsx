@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next"
 import { Navbar } from "@/components/layout/navbar"
 import { PageHero } from "@/components/ui/page-hero"
 import { BentoGrid } from "@/components/ui/bento-grid"
@@ -60,6 +59,17 @@ const services = [
         span: 2 as const,
     },
 ]
+
+export const metadata: Metadata = {
+    title: "All Cleaning Services London | Commercial & Residential | Voila Cleaners",
+    description: "Commercial, residential, and specialist cleaning services across London. Office cleaning, end of tenancy, Airbnb turnover, after-builders, and luxury housekeeping. Free quotes.",
+    openGraph: {
+        title: "All Cleaning Services London | Voila Cleaners",
+        description: "Office cleaning, serviced apartments, end of tenancy, luxury housekeeping and more. Premium cleaning across London.",
+        url: "https://voila-cleaners.co.uk/services",
+    },
+    alternates: { canonical: "https://voila-cleaners.co.uk/services" },
+}
 
 export default function ServicesPage() {
     return (
