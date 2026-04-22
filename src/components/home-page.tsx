@@ -392,13 +392,7 @@ export default function HomePage() {
                 <div className="absolute left-20 bottom-10 w-16 h-16 rounded-2xl bg-amber-50 border border-[#ede9e3] shadow-sm rotate-12 hidden lg:block" />
                 <div className="absolute right-24 bottom-16 w-20 h-20 rounded-2xl bg-blue-50 border border-[#ede9e3] shadow-sm -rotate-3 hidden lg:block" />
                 <div className="relative max-w-2xl mx-auto px-6 text-center">
-                    <div className="flex justify-center mb-8">
-                        <div className="flex -space-x-3">
-                            {["L", "H", "B", "D"].map((l, i) => (
-                                <div key={i} className="w-10 h-10 rounded-full bg-white border-2 border-[#F7F7F5] flex items-center justify-center text-xs font-bold text-[#6b6b6b] shadow-sm">{l}</div>
-                            ))}
-                        </div>
-                    </div>
+
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1a1a1a] leading-tight mb-4">
                         Ready to Elevate<br />Your Office or<br />Property?
                     </h2>
